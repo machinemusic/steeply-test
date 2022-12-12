@@ -1,0 +1,40 @@
+section {
+    text-align: center; 
+}
+
+.services-list {
+    margin-top: 3em;
+}
+
+.carousel {
+    margin: 4rem auto auto;
+    width: 80%;
+}
+
+@media (min-width: 40em) {
+    
+    section {
+        text-align: left; 
+    }
+
+    h1 {
+        font-size: 4rem;    
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        font-size: 1.3rem;
+    }
+
+    .split {
+        margin-top: 0rem;
+    }
+
+    .carousel {
+        width: 50%;
+    }
+
+}

@@ -1,0 +1,393 @@
+:root {
+    --clr-primary-200: #333;
+    --clr-neutral-900: #f9f6f1;
+    --clr-accent-200: #0b4e34;
+
+    --ff-primary: 'Jost', sans-serif;
+    --ff-accent: 'Cormorant Garamond', serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-primary-200);
+}
+
+body,
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1em;
+    color: var(--clr-accent-200);
+}
+
+h2,
+p,
+ul {
+    margin-bottom: 0rem;
+    letter-spacing: .2rem;
+    color: var(--clr-accent-200);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-primary-200);
+    letter-spacing: .2rem;
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 30px;
+}
+
+.navright {
+   justify-content: right;
+} 
+
+section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+}
+
+.color-filter {
+    filter: brightness(0) saturate(100%) invert(15%) sepia(1%) saturate(1505%) hue-rotate(315deg) brightness(95%) contrast(83%);
+}
+
+.logo {
+    width: auto;
+    height: 45px;
+    z-index: 99;
+}
+
+/* contact button.. */
+
+.contact-button {
+    min-width: 80px;
+    height: 30px;
+    color: var(--clr-accent-200);
+    padding: 5px 10px;
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    font-size: .6rem;
+    letter-spacing: .15rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    z-index: 99;
+    background-color: transparent;
+    overflow: hidden;
+    border: 2px solid var(--clr-accent-200);
+    margin-left: .5rem;
+  }
+
+.services-button {
+    min-width: 30px;
+    margin: .2rem;
+    padding: 0px;
+    border: none;
+    border-bottom: 2px solid var(--clr-accent-200); 
+}
+
+.contact-button:hover {
+    color: var(--clr-neutral-900);
+}
+
+.contact-button:hover:after {
+    height: 100%;
+}
+
+.contact-button:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background: var(--clr-accent-200);
+}
+
+/* ..contact button */
+
+/* contact-us + pic.. */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.drone-wrap {
+    width: 230px;
+    height: 50px;
+    background-image:
+      url(images/drone3.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    animation: fadeIn .5s ease-in both;
+}
+
+.contact-us {
+    position: relative;
+    top: -35%;
+    animation: fadeInDown .5s ease-in both;
+}
+
+/* ..contact-us + pic */
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+.email {
+    margin-top: 1rem;
+}
+
+.cam-pic {
+    height: 60px;
+    margin: 1rem auto;
+    animation: fadeIn .5s ease-in both;
+    animation-delay: .3s;
+}
+
+.room-pic {
+    height: 60px;
+    margin: 1rem auto;
+    animation: fadeIn .5s ease-in both;
+    animation-delay: .3s;
+}
+
+
+/* underline animation.. */
+
+.underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--clr-primary-200);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ..underline animation */
+
+ul {
+    font-size: 0.9rem;
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 0;
+    margin-block: 0;
+}
+
+.social {
+    position: absolute;
+    margin: 0;
+    bottom: 0px;
+    z-index: 10;
+    display: flex;
+}
+  
+.social li {
+    width: 100%;
+    margin: 0 0.1rem;
+}
+  
+.social li a {
+    display: inline-block;
+    transform: scale(0.3);
+    transition: 0.4s;
+}
+  
+.social li a:hover {
+    transform: scale(0.5) translateY(-15px);
+}
+
+/* fade in animations.. */
+
+.fade-in-up {
+    animation: fadeInUp .5s ease-in both;
+    animation-delay: .3s;
+}
+
+.fade-in {
+    animation: fadeIn .5s ease-in both;
+    animation-delay: .3s;
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+/* ..fade in animations */
+
+@media (min-width: 40em) {
+    header {
+        padding: 40px 50px;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    a {
+        font-size: 1.6rem;
+    }
+
+    .contact-us {
+        top: -27%;
+    }
+
+    .drone-wrap {
+        width: 800px;
+        height: 180px;
+    }
+
+    .cam-pic {
+        height: 200px;
+        margin-top: 7.5rem;
+    }
+
+    .call-us {
+        margin-top: 1rem;
+    }
+
+    .room-pic {
+        height: 200px;
+        margin-top: 3rem;
+    }
+
+    .split {
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+
+    .split > * {
+        flex-basis: 100%;
+    }
+
+    .split > * + * {
+        margin-left: 2em;
+    }
+
+    .logo {
+        width: auto;
+        height: 60px;
+    }
+
+    .contact-button {
+        min-width: 120px;
+        height: 35px;
+        font-size: .9rem;
+        letter-spacing: .17rem;
+        margin-left: .7rem;
+    }
+
+    .services-button {
+        min-width: 50px;
+        margin: .6rem;
+    }
+     
+    .social {
+        left: 0%;
+        transform: translate(0%, 0);
+    }
+
+    .social li a {
+        transform: scale(0.4);
+    }
+
+    .social li {
+        padding: 1rem;
+    }
+
+}
