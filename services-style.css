@@ -1,9 +1,25 @@
 section {
-    text-align: center; 
+    text-align: left; 
+}
+
+h2,
+p,
+ul {
+    letter-spacing: .1rem;
+}
+
+li + li {
+    margin-top: 1rem;
 }
 
 .services-list {
-    margin-top: 3em;
+    margin-top: 3em; 
+}
+
+.bullet {
+    display: list-item;
+    list-style-type: circle;
+    list-style-position: inside;
 }
 
 .carousel {
