@@ -5,7 +5,7 @@ section {
 h2,
 p,
 ul {
-    letter-spacing: .1rem;
+    letter-spacing: .05rem;
 }
 
 li + li {
@@ -23,8 +23,13 @@ li + li {
 }
 
 .carousel {
-    margin: 4rem auto auto;
+    margin: 3rem auto auto;
     width: 80%;
+}
+
+.casa-image {
+    margin: 2rem 0rem 0rem;
+    width: 60%;
 }
 
 @media (min-width: 40em) {
@@ -52,5 +57,9 @@ li + li {
     .carousel {
         width: 50%;
     }
+
+    .casa-image {
+        width: 70%;
+    }    
 
 }
